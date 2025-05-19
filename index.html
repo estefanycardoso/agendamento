@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agendamento Médico</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="img/logo.png" />
+</head>
+<body>
+  <main class="container">
+    <h1>Agendamento de Consulta</h1>
+
+    <form id="agendamento-form">
+      <label for="especialidade">Especialidade:</label>
+      <select id="especialidade" required>
+        <option value="">Selecione</option>
+      </select>
+
+      <label for="medico">Médico:</label>
+      <select id="medico" required>
+        <option value="">Selecione</option>
+      </select>
+
+      <label for="convenio">Convênio:</label>
+      <select id="convenio" required>
+        <option value="">Selecione</option>
+      </select>
+
+      <label for="data">Data:</label>
+      <input type="date" id="data" required />
+
+      <button type="button" id="btn-verificar">Verificar Horários</button>
+
+      <div id="horarios-container" class="hidden">
+        <h3>Horários Disponíveis</h3>
+        <div id="horarios-lista"></div>
+      </div>
+
+      <button type="submit">Agendar Consulta</button>
+    </form>
+
+    <section>
+      <h2>Agendamentos Realizados</h2>
+      <ul id="agendamentos-lista"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
